@@ -15,6 +15,7 @@ const cardName = document.getElementById('cardholder')
   const cardErr = document.getElementById("cardErr");
   const dateErr = document.getElementById("dateErr");
   const cvcErr = document.getElementById("cvcErr");
+  const yrErr=document.getElementById("yrErr")
 
 
 // the expressions
@@ -68,7 +69,7 @@ confirmBtn.addEventListener("click", function (e) {
     // Validate year
     const yyValue = yy.value.trim();
     if (!yyValue || !yearRegex.test(yyValue)) {
-      dateErr.textContent += "Enter valid year.";
+      yrErr.textContent += "invalid year";
       hasError = true;
     }
 
